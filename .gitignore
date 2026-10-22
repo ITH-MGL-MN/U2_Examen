@@ -1,0 +1,26 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- Bundle legible: es una copia del motor, se genera con tools/build.py ---
+grader_local.py
+
+# --- Exportación a texto plano para NotebookLM (tools/exportar_notebooklm.py) ---
+notebooklm/
+
+# --- Estado del equipo en pruebas locales ---
+equipo_*.json
+*_local_state.json
+
+# --- Gráficas / archivos temporales de pruebas ---
+*.png
+*.html
+_t.py
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini

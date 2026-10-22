@@ -1,0 +1,197 @@
+# =====================================================================
+#  Bancos teóricos del examen U2 (opción múltiple).
+#  Cada banco es una lista de variantes; a cada alumno le toca UNA por
+#  semilla. `correcta` es el índice (0‑based) de la opción correcta.
+# =====================================================================
+
+FLOTANTES:
+  - texto: '¿Por qué la expresión `0.1 + 0.2 == 0.3` devuelve `False` en Python?'
+    opciones:
+      - 'Porque 0.1 y 0.2 no tienen una representación binaria finita exacta.'
+      - 'Porque Python redondea mal la suma.'
+      - 'Porque `==` compara cadenas, no números.'
+      - 'Porque es un error de Python; debería dar `True`.'
+    correcta: 0
+
+  - texto: '¿Qué es el *épsilon de máquina* (ε)?'
+    opciones:
+      - 'El error acumulado de todas las operaciones.'
+      - 'La distancia entre 1.0 y el siguiente número representable.'
+      - 'El número más pequeño que se puede representar (underflow).'
+      - 'La cantidad de decimales de un `float`.'
+    correcta: 1
+
+  - texto: 'Un `float` de doble precisión (float64) guarda la mantisa en…'
+    opciones:
+      - '11 bits'
+      - '53 bits'
+      - '64 bits'
+      - '16 bits'
+    correcta: 1
+
+  - texto: '¿Qué provoca la **cancelación catastrófica**?'
+    opciones:
+      - 'Multiplicar números muy grandes.'
+      - 'Restar dos números casi iguales, perdiendo cifras significativas.'
+      - 'Dividir entre un número muy pequeño.'
+      - 'Sumar muchos números de signos opuestos.'
+    correcta: 1
+
+HORNER:
+  - texto: 'Evaluar un polinomio de grado $n$ con la **forma anidada de Horner** usa…'
+    opciones:
+      - '$O(n^2)$ multiplicaciones'
+      - '$n$ multiplicaciones y $n$ sumas ($O(n)$)'
+      - '$2^n$ operaciones'
+      - '$n^3$ operaciones'
+    correcta: 1
+
+  - texto: '¿Para qué sirve **deflactar** un polinomio?'
+    opciones:
+      - 'Para bajar el grado tras extraer una raíz ya encontrada.'
+      - 'Para derivarlo.'
+      - 'Para convertirlo en una fracción parcial.'
+      - 'Para calcular su épsilon de máquina.'
+    correcta: 0
+
+  - texto: 'La forma anidada de Horner de $2x^3 - 5x^2 + 3x - 7$ es…'
+    opciones:
+      - '$(2x - 5)x + (3x - 7)$'
+      - '$((2x - 5)x + 3)x - 7$'
+      - '$2(x^3) - 5(x^2) + 3x - 7$'
+      - '$2 - 5x + 3x^2 - 7x^3$'
+    correcta: 1
+
+ERROR:
+  - texto: 'La diferencia entre **redondeo** y **truncamiento** es…'
+    opciones:
+      - 'El redondeo ajusta al dígito más cercano; el truncamiento corta los dígitos sobrantes.'
+      - 'Son lo mismo.'
+      - 'El truncamiento redondea y el redondeo corta.'
+      - 'El redondeo solo aplica a enteros.'
+    correcta: 0
+
+  - texto: 'El **error relativo** de una medición se define como…'
+    opciones:
+      - 'La diferencia entre el valor real y el medido (sin dividir).'
+      - 'La diferencia entre el valor real y el medido, dividida entre el valor real.'
+      - 'La diferencia entre el valor real y el medido, multiplicada por 100.'
+      - 'El valor medido dividido entre el valor real.'
+    correcta: 1
+
+  - texto: 'Un cronómetro registra **9.6 s** cuando el tiempo real es **10 s**. ¿Cuál es el **error absoluto** de la medición?'
+    opciones:
+      - '0.4 s'
+      - '−0.4 s'
+      - '0.04'
+      - '4 %'
+    correcta: 0
+
+  - texto: '¿Qué es el **error de truncamiento (algoritmo)**?'
+    opciones:
+      - 'El que se comete al cortar una serie infinita en un número finito de términos.'
+      - 'El que se comete al guardar un número con pocos decimales.'
+      - 'El que se comete al poner un ángulo en la distancia.'
+      - 'El redondeo de $\pi$ a 3.1416.'
+    correcta: 0
+
+METODOS:
+  - texto: '¿Cuál de estos es un **método cerrado**?'
+    opciones:
+      - 'Newton-Raphson'
+      - 'Secante'
+      - 'Bisección'
+      - 'Müller'
+    correcta: 2
+
+  - texto: '¿Cuál de estos métodos **no** necesita la derivada de $f$?'
+    opciones:
+      - 'Newton-Raphson'
+      - 'Secante'
+      - 'Ambos la necesitan'
+      - 'Ninguno la necesita'
+    correcta: 1
+
+  - texto: 'Newton-Raphson suele tener convergencia…'
+    opciones:
+      - 'lineal'
+      - 'cuadrática'
+      - 'constante'
+      - 'no converge nunca'
+    correcta: 1
+
+  - texto: 'Un método **abierto** se caracteriza por…'
+    opciones:
+      - 'requerir un intervalo que encierre la raíz.'
+      - 'usar uno o más puntos de arranque sin exigir cambio de signo.'
+      - 'suele ser más lento que uno cerrado.'
+      - 'ser infalible en el intervalo seleccionado.'
+    correcta: 1
+
+CONVERGENCIA:
+  - texto: 'La bisección reduce el intervalo a la mitad en cada paso: su convergencia es…'
+    opciones:
+      - 'cuadrática'
+      - 'lineal (factor ~1/2 por iteración)'
+      - 'exponencial con base 2'
+      - 'no converge'
+    correcta: 1
+
+  - texto: '¿Cuándo puede **divergir** Newton-Raphson?'
+    opciones:
+      - 'Cuando la derivada es ~0 en el arranque o hay un mal punto inicial.'
+      - 'Nunca: siempre converge.'
+      - 'Siempre que la función sea no lineal.'
+      - 'Cuando la raíz es racional.'
+    correcta: 0
+
+  - texto: 'Un método con **convergencia lineal**…'
+    opciones:
+      - 'reduce el error en un factor constante en cada iteración.'
+      - 'cuadruplica la precisión cada paso.'
+      - 'no reduce el error.'
+      - 'converge en un solo paso.'
+    correcta: 0
+
+# Banco para los casos de SISTEMA (multivariables): en lugar de programar un
+# método de 2 incógnitas (tema no visto a profundidad), se evalúa la teoría.
+SISTEMAS:
+  - texto: 'En un **sistema de 2 ecuaciones** resuelto con Newton multivariable, ¿se puede garantizar **siempre** obtener el 100% de aciertos (la convergencia)?'
+    opciones:
+      - 'No: depende del punto inicial y del Jacobiano; un mal arranque o un Jacobiano singular pueden impedir la convergencia.'
+      - 'Sí: Newton multivariable converge para cualquier sistema y cualquier arranque.'
+      - 'Sí, siempre que el sistema sea no lineal.'
+      - 'No, porque los sistemas no se pueden resolver numéricamente.'
+    correcta: 0
+
+  - texto: 'Si tu método **no converge** en todas las muestras de una simulación, ¿qué conviene hacer?'
+    opciones:
+      - 'Dejarlo igual: ya está bien.'
+      - 'Revisar/mejorar el punto inicial, o cambiar a otro método.'
+      - 'Aumentar el número de iteraciones sin tocar el arranque.'
+      - 'Nada: el 100% nunca es posible.'
+    correcta: 1
+
+  - texto: 'En Newton-Raphson **multivariable**, el **Jacobiano** es…'
+    opciones:
+      - 'el vector de la función F.'
+      - 'la matriz de derivadas parciales de F respecto a las incógnitas.'
+      - 'el gradiente de la función objetivo.'
+      - 'una constante del sistema.'
+    correcta: 1
+
+  - texto: '¿Qué significa que el **Jacobiano sea singular** (determinante ≈ 0) en un punto?'
+    opciones:
+      - 'El sistema tiene infinitas soluciones garantizadas.'
+      - 'No se puede invertir: el método no puede avanzar desde ese punto.'
+      - 'La convergencia está garantizada.'
+      - 'El sistema es lineal.'
+    correcta: 1
+
+  - texto: 'En el **punto fijo multivariable**, la iteración converge si…'
+    opciones:
+      - 'la norma del Jacobiano de la función de iteración es menor que 1 cerca de la solución (es contractiva).'
+      - 'la función de iteración es cualquiera.'
+      - 'el punto inicial es exactamente la solución.'
+      - 'nunca converge.'
+    correcta: 0

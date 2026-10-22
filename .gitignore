@@ -34,3 +34,7 @@ _t.py
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# --- Solucionario por alumno (datos del grupo: no se publica) ---
+solucionario*.csv
+Lista_alumnos.csv

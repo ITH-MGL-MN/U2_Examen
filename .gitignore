@@ -1,3 +1,13 @@
+# =====================================================================
+#  RAMA PÚBLICA (master): el alumno solo recibe el cuaderno y el bundle
+#  ofuscado. Todo el material del profesor (motor, config, bancos) vive
+#  únicamente en la rama privada `test`.
+# =====================================================================
+profe/
+tools/
+lib/
+config/
+
 # --- Python ---
 __pycache__/
 *.py[cod]
